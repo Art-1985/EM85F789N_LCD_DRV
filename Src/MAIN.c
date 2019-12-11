@@ -59,7 +59,7 @@ void main(void){
 	//Initialize all the Device Peripherals:
 		//Analog
 		LED_Init(FuncDisable);
-		LCD_Init(FuncDisable);
+		LCD_Init(FuncEnable);
 		PAGESW		= PAG0;
 		//Other
 		FlashUnlock(FuncDisable);
@@ -88,8 +88,12 @@ void main(void){
 	void paraInit_LCD(void){
 		Uint8		LoopCounter=0;
 		PAGESW				= PAG1;
+		//LCDADDR	= 0x00;
+		//LCDDATA	= 0x00;
+		
 		for(LoopCounter=0;LoopCounter < 32;LoopCounter++){
 			LCDADDR		= 0x00;
-			LCDDATA		= 0x01;}	}
+			LCDDATA		= 0xFF;}
+	}
 
 
