@@ -37,31 +37,26 @@
 	Uint16	GlobalVar_A	= 0;
 	Uint16	GlobalVar_B	= 0;
 	
-	Uint8		SlaveWriteFinish	= 0x7F;
-	Uint8		uartWriteFinish		= 0x7F;
-	Uint16	*ptrInt2Hex;
-	Uint8		extTrigger				= 0x7F;
-	
 //=============================================================================
 //	Main Function
 //=============================================================================
 void main(void){
-	// Step 1. Initialize System Control:
+	//Initialize System Control:
 		ClrRST();
 		Oscillator_Init(FuncDisable);
 		LVD_Init(FuncDisable);
-	// Step 2. Initialize Parameter:
+	//Initialize Parameter:
 		paraInit_LCD();
-	// Step 3. Initalize GPIO:
+	//Initalize GPIO:
 		GPIO_Init();	//Initial IO State
 		P25	= 1;			//SPI chip Select release
 			
-	// Step 4. Clear all interrupts and initialize IVT:
+	//Clear all interrupts and initialize IVT:
 		IntMask_Init(FuncEnable);
 		IntPriority_Init(FuncDisable);
 		EINT_Init(FuncEnable);
 
-	// Step 5. Initialize all the Device Peripherals:
+	//Initialize all the Device Peripherals:
 		//Analog
 		LED_Init(FuncDisable);
 		LCD_Init(FuncDisable);
@@ -79,8 +74,6 @@ void main(void){
 	while(1){
 		PAGESW				= PAG0;
 
-		
-	 //====== End of python_uart_test,20181106 ======//
 	}
 }
 
