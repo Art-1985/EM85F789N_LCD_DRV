@@ -188,12 +188,12 @@ void EIOPWM_Init(void){
 	LocalVar_A.all		= EIOPWMA;
 	LocalVar_B.all		= EIOPWMB;
 	LocalVar_C.all		= EIOPWMC;
-		LocalVar_A.bits.PWMA0		= Func_Pin_Enable;	//PWMA0
-		//LocalVar_A.bits.IPWMA0	= Func_Pin_Enable;//PWMA0B
-		//LocalVar_A.bits.PWMA1		= Func_Pin_Enable;//PWMA1
-		//LocalVar_A.bits.IPWMA1	= Func_Pin_Enable;//PWMA1B
-		//LocalVar_A.bits.PWMA2		= Func_Pin_Enable;//PWMA2
-		//LocalVar_A.bits.IPWMA2	= Func_Pin_Enable;	//PWMA2B
+		//LocalVar_A.bits.PWMA0		= Func_Pin_Enable; //PWMA0
+		//LocalVar_A.bits.IPWMA0	= Func_Pin_Enable; //PWMA0B
+		//LocalVar_A.bits.PWMA1		= Func_Pin_Enable; //PWMA1
+		//LocalVar_A.bits.IPWMA1	= Func_Pin_Enable; //PWMA1B
+		//LocalVar_A.bits.PWMA2		= Func_Pin_Enable; //PWMA2
+		//LocalVar_A.bits.IPWMA2	= Func_Pin_Enable; //PWMA2B
 		//LocalVar_B.bits.PWMB0		= Func_Pin_Enable;
 		//LocalVar_B.bits.IPWMB0	= Func_Pin_Enable;
 		//LocalVar_B.bits.PWMB1		= Func_Pin_Enable;
@@ -251,8 +251,8 @@ void EIOI2C_Init(void){
 	LocalVar_A.all		= EIOI2C0;
 		//LocalVar_A.bits.SDA03		= Func_Pin_Enable;
 		//LocalVar_A.bits.SCL03		= Func_Pin_Enable;
-		LocalVar_A.bits.SDA02		= Func_Pin_Enable;
-		LocalVar_A.bits.SCL02		= Func_Pin_Enable;
+		//LocalVar_A.bits.SDA02		= Func_Pin_Enable;
+		//LocalVar_A.bits.SCL02		= Func_Pin_Enable;
 	EIOI2C0						= LocalVar_A.all;
 	} //  End of function EIOI2C_vInit
 
@@ -268,7 +268,7 @@ void EIOSPI_Init(void){
 	union EIOSPI0_REG		LocalVar_A;
 	union EIOSPI1_REG		LocalVar_B;
 	PAGESW				= PAG2;
-	LocalVar_A.all			= EIOSPI0;
+		LocalVar_A.all			= EIOSPI0;
 		//LocalVar_A.bits.SS00		= Func_Pin_Enable;
 		//LocalVar_A.bits.MISO00	= Func_Pin_Enable;
 		//LocalVar_A.bits.MOSI00	= Func_Pin_Enable;
@@ -277,11 +277,11 @@ void EIOSPI_Init(void){
 		//LocalVar_A.bits.MISO01	= Func_Pin_Enable;
 		//LocalVar_A.bits.MOSI01	= Func_Pin_Enable;
 		//LocalVar_A.bits.SCK01		= Func_Pin_Enable;
-	LocalVar_B.all			= EIOSPI1;
-		LocalVar_B.bits.SS02		= Func_Pin_Enable;
-		LocalVar_B.bits.MISO02	= Func_Pin_Enable;
-		LocalVar_B.bits.MOSI02	= Func_Pin_Enable;
-		LocalVar_B.bits.SCK02		= Func_Pin_Enable;
+		LocalVar_B.all			= EIOSPI1;
+		//LocalVar_B.bits.SS02		= Func_Pin_Enable;
+		//LocalVar_B.bits.MISO02	= Func_Pin_Enable;
+		//LocalVar_B.bits.MOSI02	= Func_Pin_Enable;
+		//LocalVar_B.bits.SCK02		= Func_Pin_Enable;
 	EIOSPI0							= LocalVar_A.all;
 	EIOSPI1							= LocalVar_B.all;
 	} //  End of function EIOSPI_vInit
@@ -298,16 +298,16 @@ void EIOSPI_Init(void){
 void EIOUART2_Init(void){
 	union EIOUART2_REG		LocalVar_A;
 	PAGESW				= PAG2;
-	LocalVar_A.all			= EIOUART2;
+		LocalVar_A.all			= EIOUART2;
 		//LocalVar_A.bits.RX20		= Func_Pin_Enable;
 		//LocalVar_A.bits.TX20		= Func_Pin_Enable;
-		LocalVar_A.bits.RX21		= Func_Pin_Enable;
-		LocalVar_A.bits.TX21		= Func_Pin_Enable;
+		//LocalVar_A.bits.RX21		= Func_Pin_Enable;
+		//LocalVar_A.bits.TX21		= Func_Pin_Enable;
 		//LocalVar_A.bits.RX22		= Func_Pin_Enable;
 		//LocalVar_A.bits.TX22		= Func_Pin_Enable;
 		//LocalVar_A.bits.RX23		= Func_Pin_Enable;
 		//LocalVar_A.bits.TX23		= Func_Pin_Enable;
-	EIOUART2						= LocalVar_A.all;
+		EIOUART2						= LocalVar_A.all;
 	} //  End of function EIOUART2_vInit
 	
 
@@ -337,46 +337,46 @@ void EIOLCDLED_Init(void){
 		LocalVar_A.bits.COM1	= Func_Pin_Enable;	
 		LocalVar_A.bits.COM2	= Func_Pin_Enable;
 		LocalVar_A.bits.COM3	= Func_Pin_Enable;
-		LocalVar_A.bits.COM4	= Func_Pin_Enable;	//Share with Seg31
-		LocalVar_A.bits.COM5	= Func_Pin_Enable;	//Share with Seg30
-		LocalVar_A.bits.COM6	= Func_Pin_Enable;	//Share with Seg29
-		LocalVar_A.bits.COM7	= Func_Pin_Enable;	//Share with Seg28
+		//LocalVar_A.bits.COM4	= Func_Pin_Enable;	//Share with Seg31
+		//LocalVar_A.bits.COM5	= Func_Pin_Enable;	//Share with Seg30
+		//LocalVar_A.bits.COM6	= Func_Pin_Enable;	//Share with Seg29
+		//LocalVar_A.bits.COM7	= Func_Pin_Enable;	//Share with Seg28
 	
-		//LocalVar_B.bits.SEG0	= Func_Pin_Enable;
-		//LocalVar_B.bits.SEG1	= Func_Pin_Enable;
-		//LocalVar_B.bits.SEG2	= Func_Pin_Enable;
-		//LocalVar_B.bits.SEG3	= Func_Pin_Enable;	//OCDS_SDA
-		//LocalVar_B.bits.SEG4	= Func_Pin_Enable;	//OCDS_SCL
-		//LocalVar_B.bits.SEG5	= Func_Pin_Enable;
-		//LocalVar_B.bits.SEG6	= Func_Pin_Enable;
-		//LocalVar_B.bits.SEG7	= Func_Pin_Enable;
+		LocalVar_B.bits.SEG0	= Func_Pin_Enable;
+		LocalVar_B.bits.SEG1	= Func_Pin_Enable;
+		LocalVar_B.bits.SEG2	= Func_Pin_Enable;
+		LocalVar_B.bits.SEG3	= Func_Pin_Enable;	//OCDS_SDA
+		LocalVar_B.bits.SEG4	= Func_Pin_Enable;	//OCDS_SCL
+		LocalVar_B.bits.SEG5	= Func_Pin_Enable;
+		LocalVar_B.bits.SEG6	= Func_Pin_Enable;
+		LocalVar_B.bits.SEG7	= Func_Pin_Enable;
 
-		//LocalVar_C.bits.SEG8	= Func_Pin_Enable;
-		//LocalVar_C.bits.SEG9	= Func_Pin_Enable;
-		//LocalVar_C.bits.SEG10	= Func_Pin_Enable;
-		//LocalVar_C.bits.SEG11	= Func_Pin_Enable;
-		//LocalVar_C.bits.SEG12	= Func_Pin_Enable;
-		//LocalVar_C.bits.SEG13	= Func_Pin_Enable;
-		//LocalVar_C.bits.SEG14	= Func_Pin_Enable;
-		//LocalVar_C.bits.SEG15	= Func_Pin_Enable;
+		LocalVar_C.bits.SEG8	= Func_Pin_Enable;
+		LocalVar_C.bits.SEG9	= Func_Pin_Enable;
+		LocalVar_C.bits.SEG10	= Func_Pin_Enable;
+		LocalVar_C.bits.SEG11	= Func_Pin_Enable;
+		LocalVar_C.bits.SEG12	= Func_Pin_Enable;
+		LocalVar_C.bits.SEG13	= Func_Pin_Enable;
+		LocalVar_C.bits.SEG14	= Func_Pin_Enable;
+		LocalVar_C.bits.SEG15	= Func_Pin_Enable;
 
-		//LocalVar_D.bits.SEG16	= Func_Pin_Enable;
-		//LocalVar_D.bits.SEG17	= Func_Pin_Enable;
-		//LocalVar_D.bits.SEG18	= Func_Pin_Enable;
-		//LocalVar_D.bits.SEG19	= Func_Pin_Enable;
-		//LocalVar_D.bits.SEG20	= Func_Pin_Enable;
-		//LocalVar_D.bits.SEG21	= Func_Pin_Enable;
-		//LocalVar_D.bits.SEG22	= Func_Pin_Enable;
-		//LocalVar_D.bits.SEG23	= Func_Pin_Enable;
+		LocalVar_D.bits.SEG16	= Func_Pin_Enable;
+		LocalVar_D.bits.SEG17	= Func_Pin_Enable;
+		LocalVar_D.bits.SEG18	= Func_Pin_Enable;
+		LocalVar_D.bits.SEG19	= Func_Pin_Enable;
+		LocalVar_D.bits.SEG20	= Func_Pin_Enable;
+		LocalVar_D.bits.SEG21	= Func_Pin_Enable;
+		LocalVar_D.bits.SEG22	= Func_Pin_Enable;
+		LocalVar_D.bits.SEG23	= Func_Pin_Enable;
 
-		//LocalVar_E.bits.SEG24	= Func_Pin_Enable;
-		//LocalVar_E.bits.SEG25	= Func_Pin_Enable;
-		//LocalVar_E.bits.SEG26	= Func_Pin_Enable;
-		//LocalVar_E.bits.SEG27	= Func_Pin_Enable;
-		//LocalVar_E.bits.SEG28	= Func_Pin_Enable;	//Share with COM7
-		//LocalVar_E.bits.SEG29	= Func_Pin_Enable;	//Share with COM6
-		//LocalVar_E.bits.SEG30	= Func_Pin_Enable;	//Share with COM5
-		//LocalVar_E.bits.SEG31	= Func_Pin_Enable;	//Share with COM4
+		LocalVar_E.bits.SEG24	= Func_Pin_Enable;
+		LocalVar_E.bits.SEG25	= Func_Pin_Enable;
+		LocalVar_E.bits.SEG26	= Func_Pin_Enable;
+		LocalVar_E.bits.SEG27	= Func_Pin_Enable;
+		LocalVar_E.bits.SEG28	= Func_Pin_Enable;	//Share with COM7
+		LocalVar_E.bits.SEG29	= Func_Pin_Enable;	//Share with COM6
+		LocalVar_E.bits.SEG30	= Func_Pin_Enable;	//Share with COM5
+		LocalVar_E.bits.SEG31	= Func_Pin_Enable;	//Share with COM4
 
 		//LocalVar_F.bits.SEG0_1	= Func_Pin_Enable;
 		//LocalVar_F.bits.SEG1_1	= Func_Pin_Enable;
