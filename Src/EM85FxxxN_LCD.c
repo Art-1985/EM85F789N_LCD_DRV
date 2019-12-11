@@ -83,7 +83,7 @@ void LCD_Init(int16	EnableCtrl){
 			LocalVar_B.bits.DS			= LCD_Duty_Div_2;
 			LocalVar_B.bits.LCDF		= LCD_FrameRate_62;
 		LocalVar_C.all					= LCDCR2;
-			LocalVar_C.bits.RBS			= LCD_ResBias_180K;
+			LocalVar_C.bits.RBS			= LCD_ResBias_20K;
 			LocalVar_C.bits.DYMEN		= LCD_Dynamic_Disable;
 		LocalVar_D.all					= LCDCR3;
 				LocalVar_D.bits.LCDCC		= LCD_VolRatio_100;
