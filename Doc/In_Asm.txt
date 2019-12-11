@@ -1,0 +1,12 @@
+//=============================================================================
+//	Description:	How to use the in line assembly language
+//
+//
+//=============================================================================
+Step 1: Establish a subFunc.c
+Step 2: Select subFunc.c right click, select "Option for ..."
+Step 3: Left click "Generate Assembler SRC File" and "Assembler SRC File" as black mark
+Step 4: Add file C51S.Lib/C51C.Lib/C51L.Lib (Option by Complier setting) at the end of Project
+Step 5: After build, it will generate subFunc.SRC
+Step 6: Change "subFunc.SRC" as "subFunc.A51"
+Step 7: Delete "C51S.LIB" and "subFunc.SRC", add "subFunc.A51"
