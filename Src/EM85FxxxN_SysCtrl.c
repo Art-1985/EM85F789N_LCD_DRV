@@ -74,7 +74,7 @@ void IntMask_Init(int16 EnableCtrl){
 			ET1					= Int_Mask_Disable;		// Timer1
 			EX1					= Int_Mask_Disable;		// Exterinal INT1
 			ET0					= Int_Mask_Disable;		// Timer0
-			EX0					= Int_Mask_Enable;		// Exterinal INT0	
+			EX0					= Int_Mask_Disable;		// Exterinal INT0	
 		LocalVar_A.all	= EIE1;
 			LocalVar_A.bits.HLVDIE	= Int_Mask_Disable;
 			LocalVar_A.bits.SHIE		= Int_Mask_Disable;
