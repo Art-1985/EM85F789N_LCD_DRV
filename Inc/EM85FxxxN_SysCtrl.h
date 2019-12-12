@@ -211,6 +211,7 @@ void Oscillator_Init(int);
 void IntMask_Init(int);
 void IntPriority_Init(int);
 void DelayFunc(int);
+void delay_sec(int);
 void Delay(unsigned int);
 /*
 void SRAM_Write(unsigned int wAddr, unsigned int wLength, unsigned char wData);
