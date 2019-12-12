@@ -62,8 +62,8 @@ void GPIO_Init(void){
 		// P0[7:0]
 		LocalVar_A		= P0M0;
 		LocalVar_B		= P0M1;
-		LocalVar_A		= LocalVar_A & 0xFC;
-		LocalVar_B		= LocalVar_B | 0x03;
+		LocalVar_A		= LocalVar_A & 0xFF;
+		LocalVar_B		= LocalVar_B | 0x00;
 		P0M0					= LocalVar_A;
 		P0M1					= LocalVar_B;
 		// P1[7:0]
@@ -76,30 +76,30 @@ void GPIO_Init(void){
 		// P2[7:0]
 		LocalVar_A		= P2M0;
 		LocalVar_B		= P2M1;
-		LocalVar_A		= LocalVar_A & 0xDF;
-		LocalVar_B		= LocalVar_B | 0x20;
+		LocalVar_A		= LocalVar_A & 0xFF;
+		LocalVar_B		= LocalVar_B | 0x00;
 		P2M0					= LocalVar_A;
 		P2M1					= LocalVar_B;
-		// P3[7:0] as Output
+		// P3[7:0]
 		LocalVar_A		= P3M0;
 		LocalVar_B		= P3M1;
-		LocalVar_A		= LocalVar_A & 0x0F;
-		LocalVar_B		= LocalVar_B | 0xF0;
+		LocalVar_A		= LocalVar_A & 0xFF;
+		LocalVar_B		= LocalVar_B | 0x00;
 		P3M0					= LocalVar_A;
 		P3M1					= LocalVar_B;
 		PAGESW				= PAG1;
 		// P4[7:0]
 		LocalVar_A		= P4M0;
 		LocalVar_B		= P4M1;
-		LocalVar_A		= LocalVar_A & 0x3F;	
-		LocalVar_B		= LocalVar_B | 0xC0;
+		LocalVar_A		= LocalVar_A & 0xFF;	
+		LocalVar_B		= LocalVar_B | 0x00;
 		P4M0					= LocalVar_A;
 		P4M1					= LocalVar_B;
-		// P5[7:0]
+		// P5[7:0] as Output
 		LocalVar_A		= P5M0;
 		LocalVar_B		= P5M1;
-		LocalVar_A		= LocalVar_A & 0x0F;
-		LocalVar_B		= LocalVar_B | 0xF0;
+		LocalVar_A		= LocalVar_A & 0xF0;
+		LocalVar_B		= LocalVar_B | 0x0F;
 		P5M0					= LocalVar_A;
 		P5M1					= LocalVar_B;
 
@@ -345,8 +345,8 @@ void EIOLCDLED_Init(void){
 		LocalVar_B.bits.SEG0	= Func_Pin_Enable;
 		LocalVar_B.bits.SEG1	= Func_Pin_Enable;
 		LocalVar_B.bits.SEG2	= Func_Pin_Enable;
-		LocalVar_B.bits.SEG3	= Func_Pin_Enable;	//OCDS_SDA
-		LocalVar_B.bits.SEG4	= Func_Pin_Enable;	//OCDS_SCL
+		//LocalVar_B.bits.SEG3	= Func_Pin_Enable;	//OCDS_SDA
+		//LocalVar_B.bits.SEG4	= Func_Pin_Enable;	//OCDS_SCL
 		LocalVar_B.bits.SEG5	= Func_Pin_Enable;
 		LocalVar_B.bits.SEG6	= Func_Pin_Enable;
 		LocalVar_B.bits.SEG7	= Func_Pin_Enable;
