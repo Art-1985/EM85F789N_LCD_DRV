@@ -168,6 +168,15 @@ void DelayFunc(int16 DelayCounter){
 		LocalVar_A	= LocalVar_A + 1;
 		} while (LocalVar_A < DelayCounter );
 }
+
+void delay_sec(int16 DelayCounter){
+	int16		LocalVar_A = 0;
+	do{
+		LocalVar_A	= LocalVar_A + 1;
+		DelayFunc(30719);
+		} while (LocalVar_A < DelayCounter );
+}
+
 void Delay(Uint16 count){
 	Uint16 cnt;
 	// T = 21 * count / Fm
