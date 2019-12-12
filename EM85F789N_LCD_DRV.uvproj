@@ -356,8 +356,8 @@
             <UserClasses></UserClasses>
             <CSection></CSection>
             <UserSection></UserSection>
-            <CodeBaseAddress>0X0000-0X47FF</CodeBaseAddress>
-            <XDataBaseAddress>0X0000-0X02FF</XDataBaseAddress>
+            <CodeBaseAddress></CodeBaseAddress>
+            <XDataBaseAddress></XDataBaseAddress>
             <PDataBaseAddress></PDataBaseAddress>
             <BitBaseAddress></BitBaseAddress>
             <DataBaseAddress></DataBaseAddress>
@@ -375,13 +375,6 @@
       <Groups>
         <Group>
           <GroupName>StartUp</GroupName>
-          <Files>
-            <File>
-              <FileName>STARTUP.A51</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\STARTUP.A51</FilePath>
-            </File>
-          </Files>
         </Group>
         <Group>
           <GroupName>Src</GroupName>
